@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanjalika Water Park</title>
+  <link rel="shortcut icon" type="x-icon" href="img/Logo/Logo(s).jpg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+  <!-- CSS only -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="Style.css">
+</head>
+<style>
+  * {
+    font-family: 'Montserrat';
+  }
+
+  .navbar .navbar-nav .nav-link {
+    color: #000000;
+    font-size: 1.1em;
+  }
+
+  .navbar .navbar-nav .nav-link:hover {
+    color: #808080;
+  }
+
+  @media only screen and (min-width: 992px) {
+    .navbar {
+      flex-direction: column;
+
+    }
+
+    .navbar .navbar-nav {
+      border-bottom: 2px solid #000;
+    }
+
+    .navbar .nav-item {
+      padding: 0.5em 1em;
+    }
+  }
+
+  .navbar .navbar-nav {
+    margin-top: 0.5em;
+    border-top: 2px solid #000;
+  }
+
+  .slogo {
+    height: 214px;
+    width: 272px;
+    margin: -2em;
+  }
+
+  #hov {
+    transition-duration: 2s;
+    transition-property: all;
+  }
+
+  /* .wave{
+        background-image: url(/img/wave2.png);
+        width: 100%;
+        height: 178px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    } */
+  .img {
+    width: 75%;
+    height: 75%;
+  }
+</style>
+
+<body>
+
+  <!-- Header Section -->
+
+  <header>
+    <section>
+      <div id="scroll-container">
+        <div id="scroll-text">The Park will remain closed till April, due to winters.<div>
+          </div>
+    </section>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="index.html"><img src="img/Logo/sanjalika.png" class="slogo"
+          alt="Sanjalika Water Park"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Park Info</a>
+            <div class="dropdown-content">
+              <a href="aboutus.html">About Us</a>
+              <a href="restaurant.html">Restaurant</a>
+              <a href="Restrictions.html">Restrictions</a>
+              <a href="Special-offer.html">Special Offer</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Rides.html">Rides</a>
+            <div class="dropdown-content">
+              <a href="Rides.html">Adults</a>
+              <a href="Rides.html">Kids</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reservationform.html">School Reservation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contactus.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section id="sec">
+    <div class="container">
+      <h2>Park Location</h2>   
+        <button onclick="getlocation();"> Show Position</button>   
+        <div id="demo" style="width: 600px; height: 400px; margin-left: 200px; border: 3px solid #3b5998;"></div>   
+         
+        <script src="https://maps.google.com/maps/api/js?sensor=false"> </script>   
+          
+        <script type="text/javascript">   
+        function getlocation(){   
+            if(navigator.geolocation){   
+                navigator.geolocation.getCurrentPosition(showPos, showErr);   
+            }  
+            else{  
+                alert("Sorry! your Browser does not support Geolocation API")  
+            }  
+        }   
+        //Showing Current Poistion on Google Map  
+        function showPos(position){   
+            latt = position.coords.latitude;   
+            long = position.coords.longitude;   
+            var lattlong = new google.maps.LatLng(latt, long);   
+            var myOptions = {   
+                center: lattlong,   
+                zoom: 15,   
+                mapTypeControl: true,   
+                navigationControlOptions: {style:google.maps.NavigationControlStyle.SMALL}   
+            }   
+            var maps = new google.maps.Map(document.getElementById("demo"), myOptions);   
+            var markers =   
+            new google.maps.Marker({position:lattlong, map:maps, title:"You are here!"});   
+         console.log(position)
+         console.log(latt)
+         console.log(long)
+        }   
+  
+        //Handling Error and Rejection  
+             function showErr(error) {  
+
+                console.log(error)
+              switch(error.code){  
+              case error.PERMISSION_DENIED:  
+             alert("User denied the request for Geolocation API.");  
+              break;  
+             case error.POSITION_UNAVAILABLE:  
+             alert("USer location information is unavailable.");  
+            break;  
+            case error.TIMEOUT:  
+            alert("The request to get user location timed out.");  
+            break;  
+           case error.UNKNOWN_ERROR:  
+            alert("An unknown error occurred.");  
+            break;  
+           }  
+        }        </script>   
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="card mb-3">
+        <img src="img/waterpark-map.jpg" style=" border: 3px solid #3b5998;" class="card-img-top" alt="Park Map">
+      </div>
+      <div class="wpb_column col-md-12 have-padding">
+        <div class="section-text text-center">
+          <h1 class="extra-bold">About Park</h1>
+        </div>
+        <div class="section-text text-center  ">
+          <p style="text-align: justify">24 acres of island summer fun. Major waterslides, including tube
+            slides, body slides, water coaster, wave pool, lazy river, toddler areas, raft rides, adventure
+            golf, the longest go-kart track in the midwest, food, shopping, cabanas, palm trees, hammocks
+            and more For peace and natural lover the Great fiesta is definitely an ultimate destination.
+            Where you can make your holiday memorable. We assure you our cleanest blue waters, mixed with
+            cool breeze, will make you shiver, even in the hottest summer days. Try it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+  <footer class="text-center text-white" style="background-color: #0099ff;">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="https://www.facebook.com/"
+          role="button"><i class="bi bi-facebook"></i></a>
+
+        <!-- Twitter -->
+        <a class="btn text-white btn-floating m-1" style="background-color: #55acee;" href="https://www.twitter.com/"
+          role="button"><i class="bi bi-twitter"></i></a>
+
+        <!-- Google -->
+        <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="https://www.google.com/"
+          role="button"><i class="bi bi-google"></i></a>
+
+        <!-- Instagram -->
+        <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="https://www.instagram.com/"
+          role="button"><i class="bi bi-instagram"></i></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-white" href="#">SanjalikaWaterPark.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

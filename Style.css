@@ -1,0 +1,580 @@
+* {
+  font-family: 'Montserrat';
+}
+
+
+.navbar .navbar-nav .nav-link {
+  color: #000000;
+  font-size: 1.1em;
+}
+
+/* .navbar .navbar-nav .nav-link:hover {
+  color: #808080;
+} */
+
+@media only screen and (max-width: 992px) {
+  .dropdown-content {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar {
+    flex-direction: column;
+
+  }
+
+  .navbar .navbar-nav {
+    border-bottom: 2px solid #000;
+  }
+
+  .navbar .nav-item {
+    padding: 0.5em 1em;
+  }
+}
+
+.navbar .navbar-nav {
+  margin-top: 0.5em;
+  border-top: 2px solid #000;
+}
+
+.slogo {
+  height: 214px;
+  width: 272px;
+  margin: -2em;
+}
+
+#hov {
+  transition-duration: 2s;
+  transition-property: all;
+}
+
+/* #hov :hover {
+  box-shadow: 0px 0px 0px 5px;
+} */
+
+.banner .carousel-inner {
+  position: relative;
+}
+
+.banner .carousel-inner::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 86, 138, .6);
+  z-index: 1;
+}
+
+.banner .carousel-inner .carousel-caption {
+  bottom: 400px;
+  z-index: 2;
+}
+
+.banner .carousel-inner .carousel-caption h1 {
+  font-size: 50px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.banner .carousel-inner .carousel-caption p {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+
+
+.banner .carousel-item .carousel-caption {
+  bottom: 380px;
+  z-index: 2;
+}
+
+.banner .carousel-item .carousel-caption h1 {
+  font-size: 50px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+@media (max-width:991px) {
+  .banner .carousel-item .carousel-caption {
+    bottom: 145px;
+  }
+
+}
+
+@media (max-width:991px) {
+  .banner .carousel-item .carousel-caption h1 {
+    font-size: 41px;
+  }
+}
+
+@media (max-width:1024px) {
+  .banner .carousel-item .carousel-caption {
+    bottom: 155px;
+  }
+}
+
+@media (max-width:767px) {
+  .banner .carousel-item .carousel-caption h1 {
+    font-size: 29px;
+  }
+}
+
+@media (max-width:767px) {
+  .banner .carousel-item .carousel-caption  {
+    bottom: 80px;
+  }
+}
+
+/* Button  */
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+button:hover .circle {
+  width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+  color: #fff;
+}
+
+
+/* Button  */
+
+.big,
+#sec {
+  background-image: url(img/content-leaves-bottom-themepark.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+}
+
+.big .card {
+  border: none;
+}
+
+.big .card img {
+  transition: transform .2s;
+
+}
+
+.big .card img:hover {
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.1) !important;
+  transform: scale(1.5);
+}
+
+.bg {
+  position: relative;
+  margin-top: 200px;
+  padding: 200px 0 200px 0;
+  background-image: url("img/1005edd4-6ca3-4c35-8650-ae756feed694-9088-dubai-laguna-waterpark-04.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg::before {
+  position: absolute;
+  content: "";
+  top: -140px;
+  left: 130px;
+  width: 300px;
+  height: 300px;
+  /* background-image: url(img/img01.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 40% 5%;
+  z-index: 2;
+}
+
+.bg::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 86, 138, .6);
+  z-index: 1;
+}
+
+.bg .bg-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: transparent !important;
+}
+
+.bg .bg-body .txt {
+  width: 50%;
+  color: white;
+  z-index: 2;
+}
+
+.bg .bg-body .txt h1 {
+  font-size: 60px;
+}
+
+.bg .bg-body .txt p {
+  font-size: 22px;
+}
+
+
+@media (max-width:991px) {
+  .bg::before {
+    width: 200px;
+    height: 200px;
+  }
+
+  .bg .bg-body .txt h1 {
+    font-size: 40px;
+  }
+
+  .bg .bg-body .txt p {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width:767px) {
+  .bg .bg-body .txt h1 {
+    font-size: 30px;
+  }
+
+  .bg .bg-body .txt p {
+    font-size: 10px;
+  }
+
+  .bg::before {
+    display: none;
+  }
+}
+
+.wave {
+  background-image: url(img/wave2.png);
+  width: 100%;
+  height: 178px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wave1 {
+  background-image: url(img/wave1.png);
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.crd {
+  /* background-color: #0099ff ; */
+  background-image: url(img/content-leaves1-bottom-themepark.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bgi {
+  background-image: url(img/waterpark-map.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 599px;
+  /* display: flex; */
+  /* align-items: center; */
+}
+
+.bgi .bgi-body {
+  position: relative;
+}
+
+.bgi .bgi-body::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 599px;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 86, 138, .6);
+  z-index: 1;
+}
+
+.bgi .bgi-body .txtx h1 {
+  font-size: 50px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.bgi .bgi-body {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.bgi .bgi-body .txtx {
+  width: 50%;
+  color: white;
+  padding-top: 200px;
+  z-index: 2;
+}
+
+@media (max-width:991px) {
+  .bgi .bgi-body .txtx h1 {
+    font-size: 40px;
+  }
+}
+
+
+.bgt {
+  background-image: url(img/jpg.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 599px;
+  /* display: flex; */
+  /* align-items: center; */
+}
+
+.bgt .bgt-body {
+  position: relative;
+}
+
+.bgt .bgt-body::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 599px;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 86, 138, .6);
+  z-index: 1;
+}
+
+.bgt .bgt-body .txtt h1 {
+  font-size: 50px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.bgt .bgt-body {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.bgt .bgt-body .txtt {
+  width: 50%;
+  color: white;
+  padding-top: 200px;
+  z-index: 2;
+}
+
+@media (max-width:991px) {
+  .bgt .bgt-body .txtt h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width:767px) {
+  .bgt .bgt-body .txtt h1 {
+    font-size: 30px;
+  }
+}
+
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.nav-item {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  /* opacity: .9; */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #0099ff;
+}
+
+/* Show the dropdown menu on hover */
+.nav-item:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* .nav-item:hover .nav-link {
+  background-color: #d8caca;
+
+} */
+
+#sec,
+.about {
+  background-image: url(img/content-leaves-bottom-themepark.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+}
+
+#sec2 {
+  padding: 50px 0;
+}
+
+#scroll-container {
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+
+#scroll-text {
+  text-align: right;
+
+  /* animation properties */
+  -moz-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+
+  -moz-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from {
+    -moz-transform: translateX(-100%);
+  }
+
+  to {
+    -moz-transform: translateX(100%);
+  }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from {
+    -webkit-transform: translateX(-100%);
+  }
+
+  to {
+    -webkit-transform: translateX(100%);
+  }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+
+  to {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
